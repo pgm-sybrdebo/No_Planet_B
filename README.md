@@ -9,4 +9,4 @@ Project: Duplicate a one-page website.
 | Firstname | Sybren                         |
 | Lastname  | De Boever                      |
 | Gender    | :male_sign:                    |
-| Email     | sybren.deboever@arteveldehs.be |
+| Email     | sybrendeboever3344@hotmail.com |

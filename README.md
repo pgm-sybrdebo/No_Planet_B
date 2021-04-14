@@ -4,7 +4,7 @@ Final Project WebDesign 2020-21 | Associate Degree in Computer Programming | Art
 
 Project: Duplicate a one-page website.
 
-
+|           |                                |
 | --------- | ------------------------------ |
 | Firstname | Sybren                         |
 | Lastname  | De Boever                      |

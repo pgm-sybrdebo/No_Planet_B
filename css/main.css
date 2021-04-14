@@ -1,0 +1,644 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins-light-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins-lightitalic-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-lightitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Animations */
+
+@keyframes rotateIce {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes orbitMoon {
+  from { 	transform: rotate(0deg) translateX(6rem); }
+  to   {  transform: rotate(360deg) translateX(6rem); }
+}
+
+/* CSS style */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'poppins';
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.maxWidthContainer {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #423c52;
+  padding: 1rem 1rem 0 1rem;
+}
+
+@media (min-width: 36rem) {
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 9000;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.nav__title {
+  color: #fff;
+  font-weight: bold;
+  background-image: url(../img/climate-change-optimised.svg);
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  padding: 0 0 1rem 4rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 52rem) {
+  .nav__title {
+    padding-bottom: 1.2rem;
+  }
+}
+
+.nav__title span {
+  color: #04C4D9;
+}
+
+.nav__bar {
+  list-style-type: none;
+  display: flex; 
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 36rem) {
+  .nav__bar {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 52rem) {
+  .nav__bar {
+    width: auto;
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 36rem) {
+  .nav__bar li {
+    width: auto;
+  }
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  line-height: 1.5;
+}
+
+.nav__link:hover {
+  color: #04C4D9;
+}
+
+.nav__button {
+  border: 1px solid #04C4D9;
+  border-radius: 5px;
+  text-align: center;
+  width: auto;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.nav__button:hover {
+  background-color: #04C4D9;
+  color: black;
+}
+
+@media (min-width: 36rem) {
+  .nav__link {
+    padding-bottom: 1.35rem;
+  }
+  .nav__link:hover {
+    border-bottom: 4px solid #04C4D9;
+  }
+  .nav__button {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 52rem) {
+  .nav__link {
+    padding: 0.8rem 0 1.65rem 0;
+  }
+  .nav__button {
+    margin-top: 0.3rem;
+  }
+}
+
+
+@media (min-width: 36rem) {
+  main {
+    margin-top: 8.3rem;
+  }
+}
+
+@media (min-width: 52rem) {
+  main {
+    margin-top: 5.2rem;
+  }
+}
+
+.container__headtitle {
+  background: #04C4D9;
+}
+
+.headtitle {
+  background: #04C4D9;
+  position: relative;
+  overflow: hidden;
+  max-width: 54rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 54rem) {
+  .headtitle {
+    overflow: visible;
+  }
+}
+
+.headtitle__text {
+  font-size: 3rem;
+  padding: 3rem 1rem 14rem 1rem;
+  line-height: 120%;
+  opacity: 0.7;
+}
+
+.headtitle__text span {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.5rem;
+  opacity: 1;
+  line-height: 100%;
+}
+
+@media (min-width: 54rem) {
+  .headtitle__text {
+    width: 15rem;
+    padding: 9rem 0 7rem 19rem;
+  }
+}
+
+@media (min-width: 58rem) {
+  .headtitle__text {
+    width: 30rem;
+    padding: 10rem 0 6rem 20rem;
+  }
+}
+
+.headtitle__img {
+  position: absolute;
+  bottom: -10rem;
+  left: -20rem;
+  width: 35rem;
+}
+
+@media (min-width: 54rem) {
+  .headtitle__img {
+    bottom: 2rem;
+    left:-19rem;
+    width: 38rem;
+  }
+}
+
+@media (min-width: 58rem) {
+  .headtitle__img {
+    bottom: -1rem;
+    left:-18rem;
+  }
+  .container__headtitle:hover .headtitle__img {
+    animation-name: rotateIce;
+    animation-duration: 6s;
+  }
+}
+
+.greybalk {
+  position: absolute;
+  height: 3rem;
+  bottom: -3rem;
+  left: -23rem;
+  background: #ddd;
+  z-index: 1000;
+  width: 100%;
+}
+
+.knowledge {
+  background: #ddd;
+  padding: 4rem 1rem;
+}
+
+.knowledge__title {
+  margin: 0 auto; 
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.knowledge__intro {
+  text-align: center;
+  padding-bottom: 1rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.knowledge__bike {
+  width: 19rem;
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+@media (min-width: 36rem) {
+  .knowledge__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 58rem;
+    margin: 0 auto;
+  }
+  .knowledge__left {
+    width: 45%;
+  }
+  .knowledge__bike {
+    width: 100%;
+  }
+  .knowledge__right {
+    width: 45%;
+  }
+}
+
+.knowledge__section {
+  padding-bottom: 2rem;
+}
+
+.knowledge__subtitle { 
+  padding: 1.5rem 0;
+  font-weight: normal;
+} 
+
+.knowledge__subtitle span {
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid black;
+}
+
+.quote {
+  background-color: #fe552f;
+  padding: 4rem 1rem 6rem 1rem;
+}
+
+.quote__title {
+  padding: 2rem 1rem 2rem 0;
+  color: #fff;
+  line-height: 3.6rem;
+}
+
+.quote__figure {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 3rem;
+}
+
+.quote__figure__border {
+  border-radius: 50%;
+  width: 11rem;
+  height: 11rem;
+  border: 5px solid #fff;
+}
+
+.quote__steven {
+  border-radius: 50%;
+  width: 10rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.quote__author {
+  color: #fff;
+  width: 5rem;
+  align-self: center;
+  margin-left: 2rem;
+}
+
+blockquote {
+  position: relative;
+}
+
+.triangle {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -1.5rem;
+  left: 5rem;
+}
+
+.quote__text {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 58rem) {
+  .quote__container {
+    display: flex;
+  }
+  .quote__figure {
+    display: block;
+    padding-right: 3rem;
+  }
+  .quote__author {
+    width: 10rem;
+    padding-top: 1rem;
+    margin-left: 2rem;
+  }
+  .triangle {
+    top: 3rem;
+    left: -1.5rem;
+  }
+}
+
+.blog {
+  background-color: #ddd;
+  padding: 4rem 1rem 4rem 0;
+}
+
+.blog .maxWidthContainer {
+  max-width: 59rem;
+}
+
+.blog__title {
+  padding: 2rem 1rem;
+}
+
+.blog__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.blog__card {
+  background-color: #fff;
+  padding-bottom: 1rem;
+  margin: 0 0 1rem 1rem;
+  position: relative;
+  width: 18.2rem;
+  flex-grow: 1;
+  box-shadow: 0px 5px 5px #423c52;
+}
+
+.card__figure {
+  position: relative;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__new {
+  position: absolute;
+  right: 1rem;
+  bottom: -1rem;
+  background-color: #fe552f;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.card__title {
+  padding: 0.5rem 1rem;
+  font-weight: normal;
+}
+
+.card__time {
+  background-color: #ddd;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 1rem;
+  background-image: url(../img/clock.svg);
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: 10% 40%;
+  font-style: italic;
+}
+
+.card__text {
+  padding: 3rem 1rem 2rem 1rem;
+}
+
+.card__readmore {
+  padding: 1rem;
+  padding-right: 0.5rem;
+  
+}
+
+.card__arrow {
+  width: 1rem;transition: all 0.2s ease-in-out; 
+  height: 1rem;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 7rem;
+}
+
+.card__readmore:hover + .card__arrow {
+  transform: translateX(0.5rem);
+}
+
+.animation {
+  background-color: #ddd;
+}
+
+.animation__world {
+  background-color: #ddd; 
+  border-radius: 50%;
+  background-image: url(../img/climate-change-optimised.svg);
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: 50% 50%;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.animation__moon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 4.5rem;
+  left: 4.5rem;
+  animation-name: orbitMoon;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.atmosphere {
+  background-color: #ddd;
+  padding: 3rem 1rem;
+}
+
+.atmosphere__title {
+  line-height: normal;
+  padding: 1rem 0;
+}
+
+.atmosphere__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.atmosphere__text span {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 52rem) {
+  .atmosphere__text span {
+    width: calc(50% - 1rem);
+  }
+}
+
+footer {
+  background-color: #423c52;
+}
+
+footer .maxWidthContainer {
+  padding: 0 1rem;
+}
+
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #423c52;
+  padding: 1rem 0;
+}
+
+.footer__section {
+  width: 14rem;
+  color: #fff;
+  padding-bottom: 2rem;
+}
+
+.footer__subtitle {
+  font-weight: normal;
+  padding: 0.5rem 0;
+}
+
+.footer__text {
+  display: block;
+  width: 11rem;
+}
+
+.footer__top ul {
+  list-style-type: none;
+}
+
+.footer__link {
+  color: #fff;
+  line-height: 1.5;
+}
+
+.footer__social {
+  display: inline;
+  padding-left: 0.5rem;
+}
+
+.footer__social:first-child {
+  padding-left: 0;
+}
+
+.footer__top svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+
+.footer__bottom {
+  background-color: #000;
+  padding: 1rem;
+}
+
+.footer__copyright {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
